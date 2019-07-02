@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hrong.db2kafka.dao.GatherDataMapper" >
+  <resultMap id="BaseResultMap" type="com.hrong.common.model.GatherData" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="GUID" property="guid" jdbcType="VARCHAR" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="CONTENT" property="content" jdbcType="VARCHAR" />
+    <result column="DEFINEID" property="defineId" jdbcType="INTEGER" />
+    <result column="gatherTime" property="gatherTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, GUID, TITLE, CONTENT, DEFINEID, GATHERTIME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from gather_data
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from gather_data
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hrong.common.model.GatherData" >
+    insert into gatherdata (ID, GUID, TITLE, 
+      CONTENT, DEFINEID, GATHERTIME
+      )
+    values (#{id,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{content,jdbcType=VARCHAR}, #{defineId,jdbcType=INTEGER}, #{gatherTime,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hrong.common.model.GatherData" >
+    insert into gatherdata
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="guid != null" >
+        GUID,
+      </if>
+      <if test="title != null" >
+        TITLE,
+      </if>
+      <if test="content != null" >
+        CONTENT,
+      </if>
+      <if test="defineId != null" >
+        DEFINEID,
+      </if>
+      <if test="gatherTime != null" >
+        GATHERTIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="guid != null" >
+        #{guid,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="defineId != null" >
+        #{defineId,jdbcType=INTEGER},
+      </if>
+      <if test="gatherTime != null" >
+        #{gatherTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hrong.common.model.GatherData" >
+    update gatherdata
+    <set >
+      <if test="guid != null" >
+        GUID = #{guid,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        TITLE = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null" >
+        CONTENT = #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="defineId != null" >
+        DEFINEID = #{defineId,jdbcType=INTEGER},
+      </if>
+      <if test="gatherTime != null" >
+        GATHERTIME = #{gatherTime,jdbcType=DATE},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hrong.common.model.GatherData" >
+    update gatherdata
+    set GUID = #{guid,jdbcType=VARCHAR},
+      TITLE = #{title,jdbcType=VARCHAR},
+      CONTENT = #{content,jdbcType=VARCHAR},
+      DEFINEID = #{defineId,jdbcType=INTEGER},
+      GATHERTIME = #{gatherTime,jdbcType=DATE}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByStartAndOffset" parameterType="com.hrong.db2kafka.model.QueryParam" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from gather_data
+    order by id
+    limit #{start} , #{offset}
+
+  </select>
+</mapper>
