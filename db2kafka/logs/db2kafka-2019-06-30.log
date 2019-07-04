@@ -1,0 +1,451 @@
+2019-06-30 10:57:29.758[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 10:57:29.762[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 10:57:29.875[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 10:57:29.885[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 10:57:30.102[main]Starting TestForGatherData on huangrong with PID 6580 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 10:57:30.102[main]The following profiles are active: local
+2019-06-30 10:57:30.913[main]Started TestForGatherData in 0.996 seconds (JVM running for 1.574)
+2019-06-30 10:57:30.921[main]
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-30 10:57:30.924[main]Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hrong.db2kafka.dao.GatherDataMapper.selectByStartAndOffset
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy55.selectByStartAndOffset(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy57.selectByStartAndOffset(Unknown Source)
+	at com.hrong.db2kafka.service.impl.ExtractGatherDataFromDbImpl.extractData(ExtractGatherDataFromDb.java:31)
+	at com.hrong.db2kafka.job.ExtractDb2KafkaJob.run(ExtractDb2KafkaJob.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	... 30 common frames omitted
+2019-06-30 10:57:30.948[main]Starting TestForGatherData on huangrong with PID 6580 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 10:57:30.948[main]The following profiles are active: local
+2019-06-30 10:57:31.142[main]Started TestForGatherData in 0.213 seconds (JVM running for 1.803)
+2019-06-30 10:57:31.143[main]
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-30 10:57:31.144[main]Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hrong.db2kafka.dao.GatherDataMapper.selectByStartAndOffset
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy55.selectByStartAndOffset(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy57.selectByStartAndOffset(Unknown Source)
+	at com.hrong.db2kafka.service.impl.ExtractGatherDataFromDbImpl.extractData(ExtractGatherDataFromDb.java:31)
+	at com.hrong.db2kafka.job.ExtractDb2KafkaJob.run(ExtractDb2KafkaJob.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	... 29 common frames omitted
+2019-06-30 10:57:31.145[main]Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b] to prepare test instance [com.hrong.db2kafka.TestForGatherData@1ea9f009]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hrong.db2kafka.dao.GatherDataMapper.selectByStartAndOffset
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy55.selectByStartAndOffset(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy57.selectByStartAndOffset(Unknown Source)
+	at com.hrong.db2kafka.service.impl.ExtractGatherDataFromDbImpl.extractData(ExtractGatherDataFromDb.java:31)
+	at com.hrong.db2kafka.job.ExtractDb2KafkaJob.run(ExtractDb2KafkaJob.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	... 30 common frames omitted
+2019-06-30 10:59:49.254[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 10:59:49.258[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 10:59:49.366[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 10:59:49.375[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 10:59:49.605[main]Starting TestForGatherData on huangrong with PID 11020 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 10:59:49.606[main]The following profiles are active: local
+2019-06-30 10:59:50.417[main]Started TestForGatherData in 1.012 seconds (JVM running for 1.577)
+2019-06-30 10:59:50.425[main]
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-30 10:59:50.428[main]Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hrong.db2kafka.dao.GatherDataMapper.selectByPrimaryKey
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy55.selectByPrimaryKey(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy57.selectByPrimaryKey(Unknown Source)
+	at com.hrong.db2kafka.service.impl.ExtractGatherDataFromDbImpl.extractData(ExtractGatherDataFromDb.java:33)
+	at com.hrong.db2kafka.job.ExtractDb2KafkaJob.run(ExtractDb2KafkaJob.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	... 30 common frames omitted
+2019-06-30 10:59:50.454[main]Starting TestForGatherData on huangrong with PID 11020 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 10:59:50.454[main]The following profiles are active: local
+2019-06-30 10:59:50.661[main]Started TestForGatherData in 0.227 seconds (JVM running for 1.821)
+2019-06-30 10:59:50.662[main]
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-30 10:59:50.663[main]Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hrong.db2kafka.dao.GatherDataMapper.selectByPrimaryKey
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy55.selectByPrimaryKey(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy57.selectByPrimaryKey(Unknown Source)
+	at com.hrong.db2kafka.service.impl.ExtractGatherDataFromDbImpl.extractData(ExtractGatherDataFromDb.java:33)
+	at com.hrong.db2kafka.job.ExtractDb2KafkaJob.run(ExtractDb2KafkaJob.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	... 29 common frames omitted
+2019-06-30 10:59:50.664[main]Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b] to prepare test instance [com.hrong.db2kafka.TestForGatherData@15b986cd]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:763)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.hrong.db2kafka.dao.GatherDataMapper.selectByPrimaryKey
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:225)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:48)
+	at org.apache.ibatis.binding.MapperProxy.cachedMapperMethod(MapperProxy.java:65)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy55.selectByPrimaryKey(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy57.selectByPrimaryKey(Unknown Source)
+	at com.hrong.db2kafka.service.impl.ExtractGatherDataFromDbImpl.extractData(ExtractGatherDataFromDb.java:33)
+	at com.hrong.db2kafka.job.ExtractDb2KafkaJob.run(ExtractDb2KafkaJob.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:779)
+	... 30 common frames omitted
+2019-06-30 11:00:08.094[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:00:08.098[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:00:08.203[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:00:08.215[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:00:08.430[main]Starting TestForGatherData on huangrong with PID 11180 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:00:08.430[main]The following profiles are active: local
+2019-06-30 11:00:09.216[main]Started TestForGatherData in 0.968 seconds (JVM running for 1.535)
+2019-06-30 11:03:50.167[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:03:50.171[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:03:50.278[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:03:50.288[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:03:50.517[main]Starting TestForGatherData on huangrong with PID 8088 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:03:50.517[main]The following profiles are active: local
+2019-06-30 11:03:51.294[main]Started TestForGatherData in 0.972 seconds (JVM running for 1.532)
+2019-06-30 11:10:36.368[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:10:36.372[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:10:36.478[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:10:36.488[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:10:36.706[main]Starting TestForGatherData on huangrong with PID 13928 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:10:36.706[main]The following profiles are active: local
+2019-06-30 11:10:37.558[main]Started TestForGatherData in 1.039 seconds (JVM running for 1.599)
+2019-06-30 11:10:37.684[main]HikariPool-1 - Starting...
+2019-06-30 11:10:37.858[main]HikariPool-1 - Start completed.
+2019-06-30 11:10:37.885[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 11:10:37.887[Thread-3]HikariPool-1 - Shutdown completed.
+2019-06-30 11:10:59.013[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:10:59.016[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:10:59.126[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:10:59.135[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:10:59.363[main]Starting TestForGatherData on huangrong with PID 6372 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:10:59.363[main]The following profiles are active: local
+2019-06-30 11:11:00.207[main]Started TestForGatherData in 1.042 seconds (JVM running for 1.602)
+2019-06-30 11:11:00.336[main]HikariPool-1 - Starting...
+2019-06-30 11:11:00.512[main]HikariPool-1 - Start completed.
+2019-06-30 11:11:00.538[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 11:11:00.540[Thread-3]HikariPool-1 - Shutdown completed.
+2019-06-30 11:12:06.820[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:12:06.823[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:12:06.927[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:12:06.937[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:12:07.147[main]Starting TestForGatherData on huangrong with PID 12564 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:12:07.148[main]The following profiles are active: local
+2019-06-30 11:12:08.002[main]Started TestForGatherData in 1.033 seconds (JVM running for 1.598)
+2019-06-30 11:12:08.131[main]HikariPool-1 - Starting...
+2019-06-30 11:12:08.296[main]HikariPool-1 - Start completed.
+2019-06-30 11:12:08.324[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 11:12:08.325[Thread-3]HikariPool-1 - Shutdown completed.
+2019-06-30 11:12:24.397[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:12:24.400[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:12:24.505[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:12:24.516[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:12:24.733[main]Starting TestForGatherData on huangrong with PID 10004 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:12:24.733[main]The following profiles are active: local
+2019-06-30 11:12:25.566[main]Started TestForGatherData in 1.019 seconds (JVM running for 1.592)
+2019-06-30 11:12:25.692[main]HikariPool-1 - Starting...
+2019-06-30 11:12:25.857[main]HikariPool-1 - Start completed.
+2019-06-30 11:12:25.883[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 11:12:25.884[Thread-3]HikariPool-1 - Shutdown completed.
+2019-06-30 11:12:37.874[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 11:12:37.878[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 11:12:37.990[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 11:12:38.001[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 11:12:38.215[main]Starting TestForGatherData on huangrong with PID 16600 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 11:12:38.215[main]The following profiles are active: local
+2019-06-30 11:12:39.062[main]Started TestForGatherData in 1.031 seconds (JVM running for 1.589)
+2019-06-30 11:12:39.192[main]HikariPool-1 - Starting...
+2019-06-30 11:12:39.357[main]HikariPool-1 - Start completed.
+2019-06-30 11:12:39.382[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 11:12:39.384[Thread-3]HikariPool-1 - Shutdown completed.
+2019-06-30 13:43:46.983[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 13:43:46.987[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 13:43:47.101[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 13:43:47.111[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 13:43:47.331[main]Starting TestForGatherData on huangrong with PID 1088 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 13:43:47.332[main]The following profiles are active: local
+2019-06-30 13:43:48.178[main]Started TestForGatherData in 1.035 seconds (JVM running for 1.61)
+2019-06-30 13:43:48.304[main]HikariPool-1 - Starting...
+2019-06-30 13:43:48.479[main]HikariPool-1 - Start completed.
+2019-06-30 13:43:48.506[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 13:43:48.508[Thread-3]HikariPool-1 - Shutdown completed.
+2019-06-30 13:44:58.775[main]Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hrong.db2kafka.TestForGatherData], using SpringBootContextLoader
+2019-06-30 13:44:58.779[main]Could not detect default resource locations for test class [com.hrong.db2kafka.TestForGatherData]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-06-30 13:44:58.886[main]Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-06-30 13:44:58.898[main]Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4efbca5a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b7cc17c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@59662a0b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@77fbd92c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@67c27493, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1a482e36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72967906, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5b8dfcc1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f9f7dcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@747ddf94, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35e2d654]
+2019-06-30 13:44:59.123[main]Starting TestForGatherData on huangrong with PID 11064 (started by huangrong in E:\workspace\data-analysis\db2kafka)
+2019-06-30 13:44:59.124[main]The following profiles are active: local
+2019-06-30 13:45:00.019[main]Started TestForGatherData in 1.089 seconds (JVM running for 1.665)
+2019-06-30 13:45:00.145[main]HikariPool-1 - Starting...
+2019-06-30 13:45:00.314[main]HikariPool-1 - Start completed.
+2019-06-30 13:45:00.341[Thread-3]HikariPool-1 - Shutdown initiated...
+2019-06-30 13:45:00.342[Thread-3]HikariPool-1 - Shutdown completed.

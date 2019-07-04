@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * @Author hrong
+ * 自定义的kafka反序列化器
  **/
 @Slf4j
 public class UserDefinedKafkaDeserializer<T> implements DeserializationSchema<T> {
