@@ -4,17 +4,22 @@ import java.util.Properties
 
 import com.alibaba.fastjson.{JSON, JSONArray}
 import com.hrong.common.model.GatherData
+import javax.annotation.Resource
 import org.apache.flink.api.common.functions.RichFlatMapFunction
 import org.apache.flink.api.common.serialization.SimpleStringSchema
 import org.apache.flink.streaming.api.datastream.DataStreamSource
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011
 import org.apache.flink.util.Collector
+import org.springframework.data.redis.core.RedisTemplate
 
 /**
   * 读取kafka数据并进行指标计算
   */
 object KafkaDataReader {
+
+  var redisTemplate = new RedisTemplate[String, String]()
+
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
     //开启五秒钟一次的checkpoint
