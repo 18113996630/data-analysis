@@ -36,10 +36,7 @@ object KafkaDataReader {
     consumer.setStartFromLatest()
 
     val stream: DataStreamSource[String] = env.addSource(consumer)
-    //将接受的数据flatmap为对象list
-    //    stream.flatMap(new RichFlatMapFunction[String, GatherData] {
-    //      override def flatMap(in: String, collector: Collector[GatherData]): Unit = ???
-    //    })
+    //暂时还没想好需求
     env.execute(this.getClass.getName)
   }
 }
